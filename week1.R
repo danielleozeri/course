@@ -1,11 +1,9 @@
 # R course for beginners
-# week 1
+# week 7
 
-subject_number = c(1:6)
-gender = c("F","M","F","M","M","F")
-age = c(27,24,30,26,40,35)
-depression = c(0,0,1,0,1,0)
+subject_number = seq(from = 1, to = 100, by = 1)
+age = sample((15:40), 100, replace = T)
+gender = sample(c('F','M'), 100, replace = T)
+depression = rbinom(100, size = 1, prob = 0.15)
 
 df = data.frame(subject_number, gender, age, depression)
-
-write.csv(df, file = "C:/Users/danie/OneDrive/Desktop/code/subjects.csv")
